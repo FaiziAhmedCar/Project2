@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tere bhai pe ek idea h </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .container{
+            /* position: relative; */
+            background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);         
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+        }
+        #image{
+            box-shadow: 2px 3px 30px;
+            /* border: solid black 2px; */
+            width: 70vw;
+            height: 70vh;
+            border-radius: 10px;
+        }
+        #bu{
+            height: 50px;
+            width: 100px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 1px 1px 40px;
+            background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+        }
+
+
+    </style>    
+</head>
+<body>
+    <div class="container">
+    <img id="image"  src="bulb1.jpg" alt="Error image not found">
+    <button id="bu" >PLUG IN</button>
+    </div>
+
+    <script>
+        let button=document.getElementById(`bu`)
+        let bulb=document.getElementById(`image`)
+
+        button.addEventListener(`click`,clickbulb)
+
+        function clickbulb(e){
+
+            if(button.textContent.includes(`IN`)){
+
+            bulb.src="bulb2.jpg"
+            button.textContent=`THAT WAS A BAD IDEA`
+            }
+
+            else{
+                bulb.src="bulb1.jpg"
+                button.textContent=`PLUG IN`
+
+            }
+        }
+    </script>
+</body>
+</html>
